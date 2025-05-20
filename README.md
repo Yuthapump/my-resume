@@ -1,4 +1,4 @@
-# Flexy Dev - Next.js Portfolio Template
+<!-- # Flexy Dev - Next.js Portfolio Template
 
 ![](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 
@@ -163,4 +163,4 @@ Before deploying, add environment variables from .env.local wherever you are dep
 1. CONTACT_FORM_ACTION_URL: Your [formspree](https://formspree.io/) url.
 1. For local development, use the localhost URL.
 
-For any query or suggestion, I am available on [LinkedIn](https://www.linkedin.com/in/abdulbasitprofile/) or email me at basit@codevertiser.com
+For any query or suggestion, I am available on [LinkedIn](https://www.linkedin.com/in/abdulbasitprofile/) or email me at basit@codevertiser.com -->
