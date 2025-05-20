@@ -27,7 +27,7 @@ const Hero = () => {
 
           <div className="mt-6 flex flex-wrap gap-6">
             <a
-              href="https://drive.google.com/file/d/1d6UPB8pIh-NRm0sEurSucIXCRAad0umW/view?usp=sharing"
+              href="https://drive.google.com/file/d/1q8as_iEZV46cBsjmqAifqF3KoeoTZrdv/view?usp=sharing"
               aria-label="Connect with me"
               className="bg-accent min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#00071E]">
               Resume

@@ -13,13 +13,21 @@ import Star from '../assets/icons/star.svg'
 import TailwindCSS from '../assets/icons/tailwind-css.svg'
 import Timer from '../assets/icons/timer.svg'
 import TypescriptIcon from '../assets/icons/typescript.svg'
+import FigmaIcon from '../assets/icons/figma.svg'
+import MysqlIcon from '../assets/icons/mysql.svg'
+import FlutterIcon from '../assets/icons/flutter.svg'
+import PostmanIcon from '../assets/icons/postman.svg'
+import HtmlIcon from '../assets/icons/html.svg'
+import CssIcon from '../assets/icons/css.svg'
+import GitIcon from '../assets/icons/git.svg'
+import DbeaverIcon from '../assets/icons/dbeaver.svg'
 
 const PreviewIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
     <svg
       width="18"
       height="20"
-      // className="text-accent"
+      className="text-accent"
       viewBox="0 0 20 19"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -336,4 +344,12 @@ export {
   Timer,
   TypescriptIcon,
   X,
+  FigmaIcon,
+  PostmanIcon,
+  MysqlIcon,
+  FlutterIcon,
+  HtmlIcon,
+  CssIcon,
+  GitIcon,
+  DbeaverIcon,
 }

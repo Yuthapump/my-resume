@@ -4,22 +4,22 @@ import Logo from '../Navbar/Logo'
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary relative flex min-h-[560px] flex-col justify-between gap-20 overflow-hidden px-4 py-14 md:p-14">
+    <footer className="bg-secondary relative flex min-h-[450px] flex-col justify-between gap-20 overflow-hidden px-4 py-14 md:p-14">
       <div className="relative z-20 grid grid-cols-1 items-start gap-20 md:grid-cols-2 md:gap-12">
         <div>
           <h5 className="mb-8 flex items-center gap-2">
             <Logo width={30} height={24} />
-            <span className="text-neutral text-lg font-medium">Logoipsum</span>
+            <span className="text-neutral text-lg font-medium">Benz</span>
           </h5>
-          <p className="text-tertiary-content">
+          {/* <p className="text-tertiary-content">
             The first free end-to-end analytics service for the site, designed to work with
             enterprises of various levels and business segments.
-          </p>
-          <a
+          </p> */}
+          {/* <a
             href="#"
             className="text-neutral mt-4 inline-flex items-center gap-2 text-xs hover:underline">
             More about us <span className="bg-neutral inline-block size-[10px] rounded-full" />
-          </a>
+          </a> */}
         </div>
 
         <div className="flex flex-wrap gap-8">
@@ -56,24 +56,24 @@ const Footer = () => {
         <div className="flex flex-col justify-between gap-[200px] md:flex-row md:gap-8">
           <div className="space-y-10 md:self-end">
             <div className="flex flex-col">
-              <h5 className="text-neutral mb-4 text-lg font-medium">Contact Us</h5>
+              <h5 className="text-neutral mb-4 text-lg font-medium">Contact Me</h5>
               <a
-                href="mailto:johndoe@gmail.com"
+                href="mailto:yuthapump@gmail.com"
                 className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300">
-                johndoe@gmail.com
+                yuthapump@gmail.com
               </a>
               <a
-                href="tel:+92 3123456789"
+                href="tel:+66 923905598"
                 className="text-tertiary-content hover:text-neutral text-sm font-light transition-colors duration-300">
-                +92 3123456789
+                +66 923905598
               </a>
             </div>
             <div>
               <div>
                 <h5 className="text-neutral mb-4 text-lg font-medium">Location</h5>
                 <address className="text-tertiary-content flex flex-col text-sm font-light">
-                  <span>123456, Pakistan</span>
-                  <span>Karachi 22/5/8, Office 4</span>
+                  <span>39/1, Bansang</span>
+                  <span>Meaung Phayao, Phayao, 56000</span>
                 </address>
               </div>
             </div>

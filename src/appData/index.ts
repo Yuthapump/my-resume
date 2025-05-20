@@ -1,14 +1,22 @@
 // Data for portfolio
 import {
   ExpressjsIcon,
+  FigmaIcon,
+  FlutterIcon,
   JavaScriptIcon,
+  MysqlIcon,
   NestjsIcon,
   NextjsIcon,
   NodejsIcon,
+  PostmanIcon,
   ReactIcon,
   SocketIcon,
   TailwindCSS,
   TypescriptIcon,
+  HtmlIcon,
+  CssIcon,
+  GitIcon,
+  DbeaverIcon,
 } from '../utils/icons'
 
 // Project Data
@@ -65,37 +73,39 @@ export const projects = [
   },
 ]
 
-// Service Data
 export const serviceData = [
   {
-    icon: JavaScriptIcon,
-    title: 'JavaScript Development',
-    shortDescription: 'Creating dynamic and interactive web applications using JavaScript.',
+    icons: [
+      ReactIcon,
+      NextjsIcon,
+      JavaScriptIcon,
+      TailwindCSS,
+      TypescriptIcon,
+      FlutterIcon,
+      HtmlIcon,
+      CssIcon,
+    ],
+    titles: [
+      'React.js & React Native',
+      'Next.js',
+      'JavaScript',
+      'Tailwind CSS',
+      'TypeScript',
+      'Flutter',
+      'HTML',
+      'CSS',
+    ],
+    topics: ['Frontend Dev'],
   },
   {
-    icon: ReactIcon,
-    title: 'React.js Development',
-    shortDescription: 'Building modern and responsive user interfaces with React.js.',
+    icons: [NodejsIcon, ExpressjsIcon, MysqlIcon],
+    titles: ['Node.js', 'Express.js', 'MySQL'],
+    topics: ['Backend Dev'],
   },
   {
-    icon: NodejsIcon,
-    title: 'Node.js Backend',
-    shortDescription: 'Developing scalable server-side applications using Node.js.',
-  },
-  {
-    icon: NextjsIcon,
-    title: 'Next.js Development',
-    shortDescription: 'Creating server-rendered React applications with Next.js.',
-  },
-  {
-    icon: TypescriptIcon,
-    title: 'TypeScript Development',
-    shortDescription: 'Ensuring robust and maintainable code with TypeScript.',
-  },
-  {
-    icon: TailwindCSS,
-    title: 'Tailwind CSS Styling',
-    shortDescription: 'Designing beautiful and responsive interfaces with Tailwind CSS.',
+    icons: [PostmanIcon, FigmaIcon, GitIcon, DbeaverIcon],
+    titles: ['Postman', 'Figma', 'Git', 'Dbeaver'],
+    topics: ['Tools'],
   },
 ]
 
@@ -126,25 +136,28 @@ export const skillList = [
     icon: ExpressjsIcon,
   },
   {
-    name: 'Nest.js',
-    icon: NestjsIcon,
+    name: 'Tailwind CSS',
+    icon: TailwindCSS,
   },
-  {
-    name: 'Socket.io',
-    icon: SocketIcon,
-  },
+  // {
+  //   name: 'Nest.js',
+  //   icon: NestjsIcon,
+  // },
+  // {
+  //   name: 'Socket.io',
+  //   icon: SocketIcon,
+  // },
 ]
 
 export const footerLinks = [
   { title: 'About', href: '#' },
   { title: 'Projects', href: '#projects' },
-  { title: 'Testimonials', href: '#testimonials' },
+  // {
+  //   title: 'Blogs',
+  //   href: '#blogs',
+  // },
   {
-    title: 'Blogs',
-    href: '#blogs',
-  },
-  {
-    title: 'Services',
+    title: 'Skilled & Tools',
     href: '#services',
   },
   {

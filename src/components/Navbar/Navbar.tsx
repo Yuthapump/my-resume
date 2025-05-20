@@ -16,7 +16,7 @@ const navItems = [
     href: '/#projects',
   },
   {
-    label: '_services',
+    label: '_Skilled & Tools',
     href: '/#services',
   },
   {
