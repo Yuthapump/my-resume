@@ -9,8 +9,8 @@ export const siteConfig = {
     github: "https://github.com/Yuthapump",
   },
   ogImage: "public/student-img.png",
-  iconIco: "/assets/favicon/favicon.ico",
-  logoIcon: "/assets/favicon/favicon.ico",
+  iconIco: "/favicon.ico",
+  logoIcon: "/favicon.ico",
   keywords: [
     "Benz Yuthapum",
     "Full Stack Developer",
