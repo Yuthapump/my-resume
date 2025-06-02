@@ -9,10 +9,8 @@ export const siteConfig = {
     github: "https://github.com/Yuthapump",
   },
   ogImage: "public/student-img.png",
-  iconIco:
-    "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357384/assets/naman-favicon.ico",
-  logoIcon:
-    "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357294/assets/naman-logo.png",
+  iconIco: "/assets/favicon/favicon.ico",
+  logoIcon: "/assets/favicon/favicon.ico",
   keywords: [
     "Benz Yuthapum",
     "Full Stack Developer",
