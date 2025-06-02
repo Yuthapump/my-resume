@@ -246,7 +246,7 @@ export const Experiences: ExperienceInterface[] = [
     shortDescription:
       "Developed a personal portfolio website using React, showcasing my skills, projects, and experiences.",
     websiteLink: "",
-    githubLink: "",
+    githubLink: "https://github.com/Yuthapump/my-resume",
     techStack: ["React", "Tailwind CSS", "Typescript", "Node.js"],
     startDate: new Date("2024-03-01"),
     endDate: new Date(""),
