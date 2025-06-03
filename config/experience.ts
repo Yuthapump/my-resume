@@ -145,6 +145,65 @@ export const Experiences: ExperienceInterface[] = [
     },
   },
   {
+    id: "benz-cart",
+    companyName: "Benz Cart",
+    type: "Personal Project",
+    category: ["Web Dev", "Frontend", "Backend"],
+    shortDescription:
+      "Developed a full-stack e-commerce application using React, Node.js, and MongoDB. Features include product management, user authentication, and a responsive design.",
+    websiteLink: "https://benz-cart-lemon.vercel.app/",
+    githubLink: "https://github.com/Yuthapump/benz-cart",
+    techStack: [
+      "Next.js",
+      "Typescript",
+      "Javascript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Clerk",
+      "Cloudinary",
+    ],
+    startDate: new Date("2025-05-01"),
+    endDate: new Date("2025-05-3"),
+    companyLogoImg: "/experience/sideproject/benz-cart/home.png",
+    pagesInfoArr: [
+      {
+        title: "Home Page",
+        description: "Landing page showcasing featured products and categories",
+        imgArr: [
+          "/experience/sideproject/benz-cart/home_1.png",
+          "/experience/sideproject/benz-cart/home_2.png",
+          "/experience/sideproject/benz-cart/home_3.png",
+        ],
+      },
+      {
+        title: "All Products Page",
+        description:
+          "Comprehensive product listing page with filters and search functionality",
+        imgArr: ["/experience/sideproject/benz-cart/all_product.png"],
+      },
+      {
+        title: "Account Page",
+        description:
+          "User account management page with order history and profile settings",
+        imgArr: [
+          "/experience/sideproject/benz-cart/account_2.png",
+          "/experience/sideproject/benz-cart/account_1.png",
+        ],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "This personal project involved the development of a full-stack e-commerce application using Next.js, Typescript, and Tailwind CSS. The application serves as a platform for users to browse and purchase products, manage their accounts, and enjoy a seamless shopping experience.",
+      ],
+      bullets: [
+        "Designed and implemented a responsive e-commerce website using Next.js and Tailwind CSS.",
+        "Developed a robust backend using Node.js and MongoDB to handle product management, user authentication, and order processing.",
+        "Integrated Clerk for secure user authentication and Cloudinary for image management.",
+        "Implemented features such as product search, filtering, and user account management to enhance user experience.",
+      ],
+    },
+  },
+  {
     id: "travel-flutter-app",
     companyName: "Travel Flutter App",
     type: "Personal Project",
@@ -191,50 +250,6 @@ export const Experiences: ExperienceInterface[] = [
       ],
       bullets: [
         "Designed and developed a user-friendly interface with Flutter, focusing on intuitive navigation and responsive design",
-      ],
-    },
-  },
-
-  {
-    id: "cirql-dashboard",
-    companyName: "Cirql Dashboard",
-    type: "Personal Project",
-    category: ["Web Dev", "Frontend", "UI/UX"],
-    shortDescription:
-      "Created a dashboard project using React and Tailwind CSS, focusing on UI design and routing implementation.",
-    websiteLink: "https://cirql-ui.namanbarkiya.xyz/",
-    techStack: ["React", "Tailwind CSS", "Google Auth"],
-    startDate: new Date("2023-01-01"),
-    endDate: new Date("2023-02-15"),
-    companyLogoImg: "/experience/cirql/logo.png",
-    pagesInfoArr: [
-      {
-        title: "Dashboard Home",
-        description:
-          "Main dashboard view with analytics widgets and data visualization",
-        imgArr: ["/experience/cirql/web_1.png", "/experience/cirql/web_2.png"],
-      },
-      {
-        title: "Profile Page",
-        description:
-          "User profile management interface with customization options",
-        imgArr: ["/experience/cirql/web_3.png", "/experience/cirql/web_4.png"],
-      },
-    ],
-    descriptionDetails: {
-      paragraphs: [
-        "For the 'Cirql Dashboard' personal project, I aimed to enhance my UI design skills and deepen my understanding of routing within a React application.",
-        "I utilized React and Tailwind CSS to craft an intuitive dashboard interface that provides users with an organized overview of data and functionalities. The UI components were thoughtfully designed to ensure a seamless user experience.",
-        "Incorporating Google Sign-In Authentication further fortified the project by adding a layer of security and convenience. Users are required to authenticate before accessing certain routes, ensuring the safety of sensitive information.",
-        "The routing system was meticulously implemented to enable smooth navigation between different sections of the dashboard, simulating real-world use cases.",
-        "Through this project, I've gained valuable insights into UI/UX design principles and the implementation of secure and efficient routing in React applications.",
-      ],
-      bullets: [
-        "Created a user-friendly dashboard project using React and Tailwind CSS.",
-        "Implemented Google Sign-In Authentication to ensure secure access to sensitive routes.",
-        "Designed UI components to provide an intuitive and visually pleasing experience.",
-        "Focused on implementing a smooth routing system to simulate real-world use cases.",
-        "Enhanced my skills in UI design, routing, and component architecture.",
       ],
     },
   },

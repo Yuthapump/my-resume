@@ -58,6 +58,8 @@ export type ValidSkills =
   | "Flutter"
   | "Google Sheets"
   | "LINE Messaging API"
+  | "Clerk"
+  | "Cloudinary"
   | "PHP";
 
 export type ValidCategory =
