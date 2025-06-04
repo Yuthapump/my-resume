@@ -42,7 +42,11 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form action={formAction} method="POST" className="space-y-8 min-w-full">
+      <form
+        action="https://formspree.io/f/xqabaezy"
+        method="POST"
+        className="space-y-8 min-w-full"
+      >
         <FormField
           control={form.control}
           name="name"
