@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -16,7 +15,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useModalStore } from "@/hooks/use-modal-store";
 
 const formSchema = z.object({
   name: z.string().min(3, {
@@ -30,10 +28,6 @@ const formSchema = z.object({
 });
 
 export function ContactForm() {
-  const storeModal = useModalStore();
-
-  // const [open, setOpen] = useState(false);
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -44,38 +38,11 @@ export function ContactForm() {
     },
   });
 
-  // 2. Define a submit handler.
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
-
-      form.reset();
-
-      if (response.status === 200) {
-        storeModal.onOpen({
-          title: "Thankyou!",
-          description:
-            "Your message has been received! I appreciate your contact and will get back to you shortly.",
-          icon: Icons.successAnimated,
-        });
-      }
-    } catch (err) {
-      console.log("Err!", err);
-    }
-  }
+  const formAction = process.env.NEXT_PUBLIC_CONTACT_FORM_ACTION_URL;
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 min-w-full"
-      >
+      <form action={formAction} method="POST" className="space-y-8 min-w-full">
         <FormField
           control={form.control}
           name="name"
@@ -83,11 +50,8 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your name" {...field} />
+                <Input placeholder="Enter your name" {...field} name="name" />
               </FormControl>
-              {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
@@ -99,7 +63,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your email" {...field} />
+                <Input placeholder="Enter your email" {...field} name="email" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -112,7 +76,11 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
-                <Textarea placeholder="Enter your message" {...field} />
+                <Textarea
+                  placeholder="Enter your message"
+                  {...field}
+                  name="message"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -125,13 +93,17 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Social</FormLabel>
               <FormControl>
-                <Textarea placeholder="Enter your social" {...field} />
+                <Input
+                  placeholder="Enter your social link"
+                  {...field}
+                  name="social"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Send</Button>
       </form>
     </Form>
   );
