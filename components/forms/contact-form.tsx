@@ -118,6 +118,19 @@ export function ContactForm() {
             </FormItem>
           )}
         />
+        <FormField
+          control={form.control}
+          name="social"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Social</FormLabel>
+              <FormControl>
+                <Textarea placeholder="Enter your social" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <Button type="submit">Submit</Button>
       </form>
     </Form>
