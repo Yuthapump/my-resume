@@ -57,10 +57,9 @@ export function ContactForm() {
 
       form.reset();
 
-      if (response.ok) {
-        // response.ok covers 200–299
+      if (response.status === 200) {
         storeModal.onOpen({
-          title: "Thank you!",
+          title: "Thankyou!",
           description:
             "Your message has been received! I appreciate your contact and will get back to you shortly.",
           icon: Icons.successAnimated,
