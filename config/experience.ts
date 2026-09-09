@@ -4,6 +4,8 @@ interface PagesInfoInterface {
   title: string;
   imgArr: string[];
   description?: string;
+  imageAlts?: string[];
+  imageDimensions?: { width: number; height: number }[];
 }
 
 interface DescriptionDetailsInterface {
@@ -23,11 +25,67 @@ export interface ExperienceInterface {
   startDate: Date;
   endDate: Date;
   companyLogoImg: any;
+  coverAlt?: string;
+  coverDimensions?: { width: number; height: number };
+  periodLabel?: string;
   descriptionDetails: DescriptionDetailsInterface;
   pagesInfoArr: PagesInfoInterface[];
 }
 
 export const Experiences: ExperienceInterface[] = [
+  {
+    id: "mediact-medimatch",
+    companyName: "Mediact & MediMatch",
+    type: "Professional",
+    category: ["Full Stack", "Mobile Dev", "Web Dev"],
+    shortDescription: "Contributed across Flutter mobile apps, Next.js web applications, backend APIs and container deployment workflows for Mediact and MediMatch.",
+    techStack: ["Flutter", "Next.js", "React", "Typescript", "Node.js", "NestJS", "Fastify", "Koa", "MySQL", "Prisma", "Sequelize", "Docker", "GitHub Actions", "DigitalOcean", "AWS S3 / SQS", "Keycloak", "Firebase / FCM", "Vitest"],
+    startDate: new Date("2024-01-01"),
+    endDate: new Date("2026-01-01"),
+    periodLabel: "2024–2026 · 2 years",
+    companyLogoImg: "/experience/mediact/operations-overview.png",
+    coverAlt: "Mediact mobile home and attendance screens alongside a web operations dashboard",
+    coverDimensions: { width: 2020, height: 2044 },
+    descriptionDetails: {
+      paragraphs: ["During my time at Mediact, I contributed to mobile, web and backend development across connected workforce and recruitment products. The work brought together user-facing features, APIs, authentication, notifications and deployment workflows."],
+      bullets: [
+        "Contributed to Flutter applications with Riverpod/GetX, API integration, notifications and mobile feature tests.",
+        "Worked on Next.js/React web applications with forms, tables, dashboards and shared state/data management.",
+        "Contributed to NestJS/Fastify and Node.js/Koa services, MySQL persistence, role-based access and background workers.",
+        "Worked with Docker builds, GitHub Actions and DigitalOcean deployments, with AWS S3/SQS, Keycloak and Firebase integrations.",
+      ],
+    },
+    pagesInfoArr: [
+      {
+        title: "Mobile scheduling & requests",
+        description: "Mobile schedule views and request approval interfaces.",
+        imgArr: ["/experience/mediact/scheduling-requests.png"],
+        imageAlts: ["Mediact mobile duty calendar with shift and leave request controls and an approval panel"],
+        imageDimensions: [{ width: 1920, height: 2064 }],
+      },
+      {
+        title: "MediMatch recruitment",
+        description: "Connected mobile job discovery and web applicant management views.",
+        imgArr: ["/experience/mediact/recruitment-overview.png"],
+        imageAlts: ["MediMatch mobile job details alongside a web applicant management table"],
+        imageDimensions: [{ width: 2129, height: 1753 }],
+      },
+      {
+        title: "Profiles & onboarding",
+        description: "Profile completion on mobile and candidate profiles on the web.",
+        imgArr: ["/experience/mediact/profiles-onboarding.png"],
+        imageAlts: ["MediMatch mobile profile completion steps and a web candidate profile with experience and education sections"],
+        imageDimensions: [{ width: 2105, height: 1777 }],
+      },
+      {
+        title: "Availability & preferences",
+        description: "Mobile job details, availability settings and profile visibility preferences.",
+        imgArr: ["/experience/mediact/availability-preferences.png"],
+        imageAlts: ["MediMatch mobile job view and availability form with work preferences and profile visibility controls"],
+        imageDimensions: [{ width: 1809, height: 2196 }],
+      },
+    ],
+  },
   {
     id: "child-development-app",
     companyName: "Naresuan University",

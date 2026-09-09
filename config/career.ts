@@ -12,9 +12,27 @@ export interface CareerExperienceInterface {
   skills: ValidSkills[];
   companyUrl?: string;
   logo?: string;
+  periodLabel?: string;
 }
 
 export const careerExperiences: CareerExperienceInterface[] = [
+  {
+    id: "mediact",
+    position: "Software Developer — Mobile, Web & Backend",
+    company: "Mediact",
+    location: "",
+    startDate: new Date("2024-01-01"),
+    endDate: new Date("2026-01-01"),
+    periodLabel: "2024–2026 · 2 years",
+    logo: "/career/mediact-logo.svg",
+    description: [
+      "Contributed to Flutter mobile apps and Next.js/React admin and backoffice applications across the Mediact and MediMatch products.",
+      "Worked on NestJS/Fastify and Node.js/Koa APIs, MySQL persistence with Prisma/Sequelize, authentication and authorization.",
+      "Contributed to notifications and background workers using Firebase Cloud Messaging and AWS SQS, with AWS S3 for file storage.",
+      "Worked with Docker builds, GitHub Actions and DigitalOcean deployments, alongside backend and Flutter feature tests.",
+    ],
+    skills: ["Flutter", "Next.js", "React", "Typescript", "Node.js", "NestJS", "Fastify", "Koa", "MySQL", "Prisma", "Sequelize", "Keycloak", "Firebase / FCM", "AWS S3 / SQS", "Docker", "GitHub Actions", "DigitalOcean", "Vitest"],
+  },
   {
     id: "nu",
     position: "Mobile Development Engineer",
