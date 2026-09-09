@@ -21,7 +21,7 @@ interface ExperiencePageProps {
 const githubUsername = "yuthapump";
 
 export default function Experience({ params }: ExperiencePageProps) {
-  let exp = Experiences.find((val) => val.id === params.expId);
+  const exp = Experiences.find((val) => val.id === params.expId);
   if (!exp) {
     redirect("/experience");
   }
@@ -40,10 +40,10 @@ export default function Experience({ params }: ExperiencePageProps) {
       </Link>
       <div>
         <time
-          dateTime={Date.now().toString()}
+          dateTime={exp.periodLabel ? undefined : exp.startDate.toISOString()}
           className="block text-sm text-muted-foreground"
         >
-          {formatDateFromObj(exp.startDate)}
+          {exp.periodLabel ?? formatDateFromObj(exp.startDate)}
         </time>
         <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
           {exp.companyName}
@@ -90,10 +90,11 @@ export default function Experience({ params }: ExperiencePageProps) {
 
       <Image
         src={exp.companyLogoImg}
-        alt={exp.companyName}
-        width={720}
-        height={405}
-        className="my-8 rounded-md border bg-muted transition-colors"
+        alt={exp.coverAlt ?? exp.companyName}
+        width={exp.coverDimensions?.width ?? 720}
+        height={exp.coverDimensions?.height ?? 405}
+        sizes="(max-width: 768px) 100vw, 720px"
+        className="my-8 h-auto w-full rounded-md border bg-muted transition-colors"
         priority
       />
 
@@ -130,11 +131,11 @@ export default function Experience({ params }: ExperiencePageProps) {
                 <Image
                   src={img}
                   key={ind}
-                  alt={img}
-                  width={720}
-                  height={405}
-                  className="my-4 rounded-md border bg-muted transition-colors"
-                  priority
+                  alt={page.imageAlts?.[ind] ?? `${exp.companyName} — ${page.title}, view ${ind + 1}`}
+                  width={page.imageDimensions?.[ind]?.width ?? 720}
+                  height={page.imageDimensions?.[ind]?.height ?? 405}
+                  sizes="(max-width: 768px) 100vw, 720px"
+                  className="my-4 h-auto w-full rounded-md border bg-muted transition-colors"
                 />
               ))}
             </div>

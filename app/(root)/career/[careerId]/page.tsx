@@ -66,11 +66,11 @@ export default function CareerDetailPage({ params }: CareerDetailPageProps) {
         {/* Date badge at the top of the card */}
         <div className="mb-4 flex justify-center sm:justify-start">
           <div className="inline-flex items-center bg-background border border-primary px-2 py-0.5 rounded-full text-xs font-medium text-primary shadow-sm">
-            {typeof career.endDate === "string"
+            {career.periodLabel ?? (typeof career.endDate === "string"
               ? getYearFromDate(career.startDate) + " - Present"
               : getYearFromDate(career.startDate) +
                 " - " +
-                getYearFromDate(career.endDate)}
+                getYearFromDate(career.endDate))}
           </div>
         </div>
 

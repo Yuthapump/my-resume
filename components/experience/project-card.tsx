@@ -15,10 +15,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <div className="relative p-6 max-w-sm bg-background border border-border rounded-lg">
       <div className="relative w-full h-[200px]">
         <Image
-          className="rounded-lg border border-border object-cover"
+          className={`rounded-lg border border-border ${project.coverDimensions ? "object-contain" : "object-cover"}`}
           src={project.companyLogoImg}
-          alt="img"
+          alt={project.coverAlt ?? `${project.companyName} project preview`}
           fill
+          sizes="(max-width: 640px) 100vw, 384px"
         />
       </div>
       <div className="pt-5 space-y-3">

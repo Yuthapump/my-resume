@@ -107,11 +107,11 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
               </div>
               <div className="flex flex-row sm:flex-col items-center sm:items-end justify-between sm:justify-start gap-2">
                 <div className="inline-flex items-center justify-center bg-background border border-primary px-2 py-0.5 rounded-full text-xs font-medium text-primary shadow-sm">
-                  {typeof experience.endDate === "string"
+                  {experience.periodLabel ?? (typeof experience.endDate === "string"
                     ? getYearFromDate(experience.startDate) + " - Now"
                     : getYearFromDate(experience.startDate) +
                       " - " +
-                      getYearFromDate(experience.endDate)}
+                      getYearFromDate(experience.endDate))}
                 </div>
                 <motion.div
                   animate={{ rotate: isExpanded ? 180 : 0 }}
